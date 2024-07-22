@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+  body {
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  .logo {
+    max-width: 100px;
+    height: auto;
+    /* Adjust styles as needed for your logo */
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .nav-bar ul li {
+    margin-right: 20px;
+  }
+  .nav-bar ul li:last-child {
+    margin-right: 0;
+  }
+  .nav-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  .nav-bar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="nav-bar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <img src="logo.png" alt="Logo" class="logo">
+  <div class="nav-bar">
+    <ul>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Sign Up</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Rest of your content here -->
+
+</body>
+</html>

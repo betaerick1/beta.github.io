@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Issues</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* General styles */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.background-container {
+  background-image: url('images/IRS_5683.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.header {
+  background-color: #ffc107; /* Yellow */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+  /* Add any animations or styles for your logo here */
+}
+
+.nav-bar {
+  background-color: #2196f3; /* Blue */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-bar ul li {
+  margin-right: 20px;
+}
+
+.nav-bar ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  background-color: #1565c0; /* Darker shade of blue */
+  border-radius: 5px;
+}
+
+.footer {
+  background-color: #ffc107; /* Yellow */
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Main section styles */
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.issues {
+  margin-bottom: 20px;
+}
+
+.issue {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.issue h3 {
+  margin-top: 0;
+}
+
+.form-section {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #500ce3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0abdef;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+      padding: 10px;
+  }
+
+  .issue,
+  .form-section {
+      padding: 10px;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="header">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="issues.html">Issues</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <main>
+            <section class="issues">
+                <h2>Explore Important Issues</h2>
+                <div class="issue">
+                    <h3>Climate Change</h3>
+                    <p>Climate change refers to the long-term alteration of global weather patterns primarily caused by human activities releasing greenhouse gases into the atmosphere, leading to rising temperatures, sea level rise, and more frequent extreme weather events. Addressing climate change requires global cooperation to reduce emissions and adapt to its impacts.</p>
+                </div>
+                <div class="issue">
+                    <h3>Healthcare Reform</h3>
+                    <p>Healthcare reform involves making changes to the healthcare system to improve access, quality, and affordability of healthcare services for individuals and communities. It often includes initiatives to expand health insurance coverage, control healthcare costs, enhance preventive care, and address disparities in healthcare access. The goal is to ensure that all individuals can receive necessary medical care without facing financial hardship.</p>
+                </div>
+                <div class="issue">
+                    <h3>Economic Policies</h3>
+                    <p>Economic policies are government strategies aimed at influencing the economy's growth, stability, and distribution of wealth. These policies can include fiscal measures like taxation and government spending, monetary policies managed by central banks to regulate money supply and interest rates, and regulatory measures to ensure fair competition and consumer protection. The goal is to achieve sustainable economic growth, manage inflation, promote employment, and address income inequality.</p>
+                </div>
+                <div class="issue">
+                    <h3>Education Reform</h3>
+                    <p>Education reform involves making significant changes to the education system to improve outcomes for students. This can include updating curriculum to better reflect current knowledge and skills needed in the workforce, implementing new teaching methods and technologies, increasing funding for schools, improving teacher training and support, and addressing inequalities in access to quality education. The aim is to ensure that all students receive a high-quality education that prepares them for success in life and work.</p>
+                </div>
+            </section>
+<!--
+            <section class="form-section">
+                <h2>Join the Conversation</h2>
+                <form id="issuesform" action="issues.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue">Select an Issue:</label>
+                        <select id="issue" name="issue" required>
+                            <option value="" disabled selected>Select an issue</option>
+                            <option value="climate_change">Climate Change</option>
+                            <option value="healthcare_reform">Healthcare Reform</option>
+                            <option value="economic_policies">Economic Policies</option>
+                            <option value="education_reform">Education Reform</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn">Submit</button>
+                </form>
+            </section>
+        </main>
+      -->
+        <div class="footer">
+            Designed by <a href="#">JACQUES OBED</a> &copy; 2024 Political Website. All rights reserved.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

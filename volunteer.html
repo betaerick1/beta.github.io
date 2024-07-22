@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HON. BETA</title>
+  <style>
+    body {
+      background-image: url('/IRS_5683.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .header {
+      background-color: #ffc107;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #333;
+    }
+
+    .logo {
+      max-width: 100px;
+      height: auto;
+      animation: rotateLogo 1s linear forwards;
+    }
+
+    @keyframes rotateLogo {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .nav-bar {
+      background-color: #2196f3;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .nav-bar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-bar ul li {
+      margin-right: 20px;
+    }
+
+    .nav-bar ul li:last-child {
+      margin-right: 0;
+    }
+
+    .nav-bar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-bar ul li a:hover {
+      background-color: #1565c0;
+      border-radius: 5px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .volunteer-info, .volunteer-form {
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      background-color: #ffc107;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      /* Example: Adjust styles for smaller screens */
+      .container {
+          width: 90%;
+      }
+      /* Additional responsive styles as needed */
+  }
+  
+
+  </style>
+</head>
+<body>
+
+<div class="background-container">
+  <div class="header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <div class="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="issues.html">Issues</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <ul>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="donate.html">Donate</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h1>Volunteer with Us</h1>
+    <p>Make a difference in your community!</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <section class="volunteer-info">
+      <h2>Why Volunteer?</h2>
+      <p>Volunteering with us means...</p>
+      <ul>
+        <li>Supporting important causes</li>
+        <li>Building connections and skills</li>
+        <li>Making a positive impact</li>
+        <li>...</li>
+      </ul>
+    </section>
+
+    <section class="volunteer-form">
+      <h2>Sign Up to Volunteer</h2>
+      <form action="volunteer.php" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message (optional):</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" name="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+
+<script src="script1.js"></script>
+
+<div class="footer">
+  Designed by <a href="#">JACQUES OBED</a> &copy; 2024 Political Website. All rights reserved.
+</div>
+
+</body>
+</html>
