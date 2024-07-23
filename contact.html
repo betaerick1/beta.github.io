@@ -204,111 +204,115 @@
 </head>
 <body>
 
-  < class="background-container">
-    <!-- Content goes here -->
-
-    <div class="header">
-      <img src="images/logo.png" alt="Logo" class="logo">
-      <div class="nav-bar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="issues.html">Issues</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+<div class="background-container">
+  <!-- Header -->
+  <div class="header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <div class="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="issues.html">Issues</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-
-    <div class="container">
-      <div class="contact-info">
-        <h2>Contact Us</h2>
-        <div class="address">
-          <p><strong>HON. BETA OUKO</strong></p>
-          <p>P.O. BOX 60 KIAMOKAMA,</p>
-          <p>KENYA.</p>
-          <p>Email: <a href="mailto:betaerick1@gmail.com">betaerick1@gmail.com</a></p>
-          <p>Phone: <a href="tel:+254 708081328">+254 708081328</a></p>
-        </div>
-        <div class="map-container">
-          <!-- Replace the src attribute with your own Google Maps iframe embed code -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31915.279277463298!2d34.849151723877235!3d-0.8198101851075148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b69e71bb5bc19%3A0x5760539ff6dfae47!2sKiamokama!5e0!3m2!1sen!2ske!4v1721716579753!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-
-      <div class="contact-form">
-        <script type="text/javascript" src="https://form.jotform.com/jsform/242034150300031"></script>
-        <h2>Get In Touch</h2>
-        <form id="contactForm" action="" method="POST">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">Your Message:</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <input type="submit" value="Send">
-        </form>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-whatsapp">WhatsApp</i></a>
-          <a href="#"><i class="fab fa-facebook">Facebook</i></a>
-          <a href="#"><i class="fab fa-linkedin">LinkedIn</i></a>
-          <a href="#"><i class="fab fa-instagram">Instagram</i></a>
-          <a href="#"><i class="fab fa-youtube">YouTube</i></a>
-          <a href="#"><i class="fab fa-twitter">Twitter</i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      Designed by <a href="#">JACQUES OBED</a> &copy; 2024 Political Website. All rights reserved.
-    </div>
-
-    <!-- Notification message -->
-    <div class="notification" id="notification">
-      Your message has been sent successfully!
-    </div>
-
-    <!-- JavaScript for form submission and notification -->
-    <script>
-
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
-    
-      // Collect form data
-      var formData = new FormData(this);
-    
-      // Send form data using AJAX
-      fetch('sendEmail.php', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json()) // Assuming your PHP script returns JSON response
-      .then(data => {
-        // Show success message or handle response
-        var notification = document.getElementById('notification');
-        notification.textContent = data.message; // Assuming your PHP script returns a message
-        notification.style.display = 'block';
-    
-        // Hide the notification after 3 seconds
-        setTimeout(function() {
-          notification.style.display = 'none';
-        }, 3000);
-    
-        // Optionally, clear the form fields after successful submission
-        document.getElementById('contactForm').reset();
-      })
-      .catch(error => {
-        // Handle errors
-        console.error('Error:', error);
-        // Show error message or handle error in UI
-      });
-    });
-  
-    
-   </script> 
   </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <div class="address">
+        <p><strong>HON. BETA OUKO</strong></p>
+        <p>P.O. BOX 60 KIAMOKAMA,</p>
+        <p>KENYA.</p>
+        <p>Email: <a href="mailto:betaerick1@gmail.com">betaerick1@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254 708081328">+254 708081328</a></p>
+      </div>
+      <div class="map-container">
+        <!-- Replace the src attribute with your own Google Maps iframe embed code -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31915.279277463298!2d34.849151723877235!3d-0.8198101851075148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b69e71bb5bc19%3A0x5760539ff6dfae47!2sKiamokama!5e0!3m2!1sen!2ske!4v1721716579753!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Get In Touch</h2>
+      <!-- JotForm script goes here -->
+      <script type="text/javascript" src="https://form.jotform.com/jsform/242034150300031"></script>
+      
+      <!-- Your existing contact form -->
+      <form id="contactForm" action="sendEmail.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Send">
+      </form>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-whatsapp">WhatsApp</i></a>
+        <a href="#"><i class="fab fa-facebook">Facebook</i></a>
+        <a href="#"><i class="fab fa-linkedin">LinkedIn</i></a>
+        <a href="#"><i class="fab fa-instagram">Instagram</i></a>
+        <a href="#"><i class="fab fa-youtube">YouTube</i></a>
+        <a href="#"><i class="fab fa-twitter">Twitter</i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Designed by <a href="#">JACQUES OBED</a> &copy; 2024 Political Website. All rights reserved.
+  </div>
+
+  <!-- Notification message -->
+  <div class="notification" id="notification">
+    Your message has been sent successfully!
+  </div>
+
+  <!-- JavaScript for form submission and notification -->
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Collect form data
+    var formData = new FormData(this);
+
+    // Send form data using AJAX
+    fetch('sendEmail.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json()) // Assuming your PHP script returns JSON response
+    .then(data => {
+      // Show success message or handle response
+      var notification = document.getElementById('notification');
+      notification.textContent = data.message; // Assuming your PHP script returns a message
+      notification.style.display = 'block';
+
+      // Hide the notification after 3 seconds
+      setTimeout(function() {
+        notification.style.display = 'none';
+      }, 3000);
+
+      // Optionally, clear the form fields after successful submission
+      document.getElementById('contactForm').reset();
+    })
+    .catch(error => {
+      // Handle errors
+      console.error('Error:', error);
+      // Show error message or handle error in UI
+    });
+  });
+  </script>
+
+</div>
+
 </body>
 </html>
