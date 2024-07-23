@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_NEWS_API_KEY'; // Replace with your actual news API key
+const apiKey = 'c69a24a3662c45849a36f82969b4a45b'; // Replace with your actual news API key
 const baseUrl = 'https://newsapi.org/v2/everything';
 
 const searchButton = document.getElementById('searchButton');
