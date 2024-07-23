@@ -6,28 +6,28 @@
 <title>HON. BETA</title>
 <style>
   body {
-    background-image: url('IRS_5683.jpg'); /* Replace 'background.jpg' with your image file */
-    background-size: 99%;
+    background-image: url('/IRS_5683.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
   }
 
   .background-container {
-    height: 100vh; /* Adjust as needed */
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    animation: changeBackground 8s linear infinite; /* Change every 2 seconds (4s total with 2 images) */
+    animation: changeBackground 8s linear infinite;
   }
   
   @keyframes changeBackground {
     0%, 50% {
-      background-image: url('IRS_5683.jpg'); /* First image */
+      background-image: url('images/IRS_5683.jpg'); /* First image */
     }
     50.1%, 100% {
-      background-image: url('background\ 2.jpg'); /* Second image */
+      background-image: url('images/background\ 2.jpg'); /* Second image */
     }
   }
 
@@ -42,16 +42,15 @@
   .logo {
     max-width: 100px;
     height: auto;
-    animation: rotateLogo 1s linear forwards; /* Animation properties */
-    /* Adjust styles as needed for your logo */
+    animation: rotateLogo 1s linear forwards;
   }
 
   @keyframes rotateLogo {
     from {
-      transform: rotate(0deg); /* Start rotation at 0 degrees */
+      transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg); /* End rotation at 360 degrees (one full rotation) */
+      transform: rotate(360deg);
     }
   }
   
@@ -88,14 +87,14 @@
   }
 
   .container {
-    max-width: 1200px;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 20px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   .contact-info {
     flex: 1;
@@ -190,15 +189,26 @@
     display: none;
     z-index: 1000;
   }
+
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin: 10px;
+    }
+    
+    .map-container {
+      height: 200px; /* Adjusted height for smaller screens */
+    }
+  }
 </style>
 </head>
 <body>
 
-  <div class="background-container">
+  < class="background-container">
     <!-- Content goes here -->
 
     <div class="header">
-      <img src="logo.png" alt="Logo" class="logo">
+      <img src="images/logo.png" alt="Logo" class="logo">
       <div class="nav-bar">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -222,32 +232,14 @@
         </div>
         <div class="map-container">
           <!-- Replace the src attribute with your own Google Maps iframe embed code -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158865.85443970015!2d-122.41941550841681!3d37.77492949943233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580b096e6f10f%3A0x8a3a855a333a74b6!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1619803943410!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31915.279277463298!2d34.849151723877235!3d-0.8198101851075148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b69e71bb5bc19%3A0x5760539ff6dfae47!2sKiamokama!5e0!3m2!1sen!2ske!4v1721716579753!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
-     <div class="contact-form">
-        <!--<h2>Get In Touch</h2>
-
-        <script type="text/javascript" src="https://form.jotform.com/jsform/242034150300031"></script>
-        
-   <!-- <iframe
-      id="JotFormIFrame-242034150300031"
-      title="contact form"
-      onload="window.parent.scrollTo(0,0)"
-      allowtransparency="true"
-      allow="geolocation; microphone; camera; fullscreen"
-      src="https://form.jotform.com/242034150300031"
-      frameborder="0"
-      style="min-width:100%;max-width:100%;height:539px;border:none;"
-      scrolling="no"
-    >
-    </iframe>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242034150300031']", "https://form.jotform.com/")</script>
-    
-        <form id="contactForm" action="https://form.jotform.com/242034150300031" method="POST">-->
-         <!-- <label for="name">Your Name:</label>
+      <div class="contact-form">
+        <h2>Get In Touch</h2>
+        <form id="contactForm" action="" method="POST">
+          <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required>
 
           <label for="email">Your Email:</label>
@@ -267,7 +259,7 @@
           <a href="#"><i class="fab fa-twitter">Twitter</i></a>
         </div>
       </div>
-    </div>-->
+    </div>
 
     <div class="footer">
       Designed by <a href="#">JACQUES OBED</a> &copy; 2024 Political Website. All rights reserved.
@@ -280,25 +272,42 @@
 
     <!-- JavaScript for form submission and notification -->
     <script>
-      document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting
 
-        // Simulate a successful submission (for demonstration purposes)
-        // In a real scenario, you would send the form data to a server using AJAX
-
-        // Show the notification
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+    
+      // Collect form data
+      var formData = new FormData(this);
+    
+      // Send form data using AJAX
+      fetch('sendEmail.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json()) // Assuming your PHP script returns JSON response
+      .then(data => {
+        // Show success message or handle response
         var notification = document.getElementById('notification');
+        notification.textContent = data.message; // Assuming your PHP script returns a message
         notification.style.display = 'block';
-
+    
         // Hide the notification after 3 seconds
         setTimeout(function() {
           notification.style.display = 'none';
         }, 3000);
-
-        // Optionally, clear the form fields after submission
+    
+        // Optionally, clear the form fields after successful submission
         document.getElementById('contactForm').reset();
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+        // Show error message or handle error in UI
       });
-    </script>
+    });
+  
+    
+   </script> 
   </div>
 </body>
 </html>
