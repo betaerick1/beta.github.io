@@ -1,5 +1,5 @@
 const apiKey = 'c69a24a3662c45849a36f82969b4a45b'; // Replace with your actual news API key
-const baseUrl = 'https://newsapi.org/v2/everything';
+const baseUrl = `https://newsapi.org/v2/everything?q=tesla&from=2024-06-23&sortBy=publishedAt&apiKey=${apiKey}`;
 
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
