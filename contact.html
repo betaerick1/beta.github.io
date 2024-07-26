@@ -39,20 +39,31 @@
     align-items: center;
     color: #333;
   }*/
-  .logo {
-    max-width: 100px;
-    height: auto;
-    animation: rotateLogo 1s linear forwards;
-  }
+ /* Ensure the wrapper takes the full width of the viewport */
+.logo-wrapper {
+  width: 100%;
+  background-color: yellow; /* Background color for the full width */
+  display: flex; /* Center the logo */
+  justify-content: center; /* Center horizontally */
+  padding: 10px 0; /* Optional: adjust padding as needed */
+}
 
-  @keyframes rotateLogo {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+.logo {
+  max-width: 100px; /* Logo size */
+  height: auto; /* Maintain aspect ratio */
+  animation: rotateLogo 1s linear forwards; /* Animation */
+}
+
+/* Define the rotation animation */
+@keyframes rotateLogo {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
   
    .nav-bar {
     background-color: #2196f3; /* Blue */
